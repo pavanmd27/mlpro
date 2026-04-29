@@ -9,7 +9,7 @@ app.use(cors());
 app.use(express.json());
 
 // Database Setup
-const mongoURI = 'mongodb://127.0.0.1:27017/heart_disease_predictor';
+const mongoURI = 'mongodbtsrv://pavansagaradas_db_user:IngvLqm08TAsNP91@mlproject.lep03fs.mongodb.net';
 mongoose.connect(mongoURI).then(() => {
   console.log('Connected to MongoDB Compass');
 }).catch((err) => {
