@@ -69,7 +69,7 @@ function App() {
 
     try {
       const payload = { ...formData, user_id: user?.id };
-      const response = await fetch("http://localhost:8000/predict", {
+      const response = await fetch("/predict", {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -95,7 +95,7 @@ function App() {
   const fetchStats = async () => {
     if (!user) return;
     try {
-      const res = await fetch(`http://localhost:8000/stats?user_id=${user.id}`);
+      const res = await fetch(`/stats?user_id=${user.id}`);
       const data = await res.json();
       setUserStats(data);
     } catch (error) {
